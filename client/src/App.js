@@ -5,7 +5,7 @@ import { io } from "socket.io-client";
 import Chat from "./Chat";
 import JoinChat from "./JoinChat";
 
-const socket = io.connect("http://localhost:3001");
+const socket = io.connect(process.env.REACT_APP_SERVER_URL);
 
 function App() {
   const [user, setUser] = useState({ username: "", room: "" });
